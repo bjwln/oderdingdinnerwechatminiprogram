@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+  "van-cell-group": "@vant/weapp/cell-group/index",
+  "van-empty": "@vant/weapp/empty/index"
+  },
+  "navigationBarBackgroundColor": "#ebf2f7",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的收藏"
+}

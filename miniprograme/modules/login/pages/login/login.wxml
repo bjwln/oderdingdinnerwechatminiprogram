@@ -1,0 +1,79 @@
+<!--modules/login/pages/login/login.wxml-->
+<van-empty class="custom-image"   image="https://bpic.51yuansu.com/pic3/cover/00/94/67/58dcd695f1f2f_610.jpg?x-oss-process=image/resize,h_360,m_lfit/sharpen,100" description="请点击下方的按钮，授权登陆您的账户">
+
+  <view class="box">
+    <view wx:if="{{!showInputBox}}">
+      <van-button round type="danger" custom-class="my-button" bindtap="showInput">
+        账号密码登录
+      </van-button>
+    </view>
+
+    <view wx:if="{{showInputBox}}" class="show_input">
+      <van-cell-group>
+        <van-field custom-class="van_field_class" value="{{ username }}" required clearable label="用户名" icon="question-o" placeholder="请输入用户名" bind:click-icon="onClickIcon" bind:input="onUsernameInput"  />
+
+        <van-field custom-class="van_field_class" value="{{ password }}" type="password" label="密码" placeholder="请输入密码" required border="{{ false }}"  bind:input="onPasswordInput" />
+      </van-cell-group>
+      <van-button plain hairline type="primary" custom-class="login_button" bindtap="log">登录</van-button>
+      <!-- 登陆成功提示 -->
+      <van-toast id="van-toast" />
+      <van-button plain hairline type="primary" custom-class="login_button" bindtap="return">返回</van-button>
+
+      <view class="register_text" bindtap="goto_register">没有账号? 立即注册</view>
+        <!-- 登陆失败弹窗 -->
+    <van-dialog id="van-dialog" />
+    </view>
+
+  
+
+    <!-- 这里要用custom-class属性自定义样式类型 -->
+    <van-button round type="danger" bindtap="login" custom-class="my-button">
+      第三方账号登录
+    </van-button>
+  </view>
+
+  <view wx:if="{{show}}">
+
+    <!-- 弹出层 -->
+    <van-popup show="{{ show }}" position="bottom" custom-style="height: 30%;" bind:close="onClose">
+      <view class="apply_text">
+        申请获取您的头像和昵称
+      </view>
+
+      <!-- 需要使用form组件包裹住input以及button组件 -->
+      <form bindsubmit="onSubmit">
+        <view class="touxiang_box">
+          <text class="touxiang_text"> 头像： </text>
+          <button class="touxiang_button" open-type="chooseAvatar" bindchooseavatar="submit_touxiang">点击获取您的头像</button>
+        </view>
+
+        <!-- input输入框组件的type属性设置为nickname,用户点击输入框，键盘上方才会显示微信昵称 -->
+        <!-- 如果添加了name属性，form组件就会自动收集带有name属性的表单元素的值 -->
+        <view class="name_box">
+          <text class="nickname_text"> 昵称: </text>
+          <input class="nickname_input" type="nickname" name="nickname"> </input>
+        </view>
+
+        <view class="confirm_button">
+            <view>
+              <button bindtap="close_register">拒绝</button>
+            </view>
+            <!-- 用来模拟空格 -->
+            <view style="height: 20rpx; width: 50px;"></view>
+            <view>
+              <!-- 如果将form-type = "submit",就会将按钮变为提交按钮 -->
+              <!-- 在点击提交按钮时候，会触发表单的bindsubmit提交事件 -->
+              <button form-type="submit" bindtap="close_register">允许</button>
+            </view>
+          </view>
+      </form>
+
+    </van-popup>
+
+
+
+
+  </view>
+
+
+</van-empty>

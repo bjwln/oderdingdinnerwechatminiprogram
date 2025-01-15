@@ -1,0 +1,151 @@
+/* pages/personal/personal.wxss */
+.content{
+  background-color: white;
+}
+.mylove__box{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  left:0%;
+  top:30%;
+
+  z-index: -1; /* 确保在文字后面 */
+  background: rgba(70, 57, 17, 0.2)
+}
+.my_love{
+  background-color: rgb(125, 175, 240);
+  position: fixed;
+  top:31%;
+  left:0%;
+  padding: 2%;
+  border-radius: 7%;
+}
+._background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* 背景图片占据屏幕高度的30% */
+  z-index: -1; /* 确保背景图片在内容下面 */
+  background-image: url('https://img0.baidu.com/it/u=2602903116,45962552&fm=253&fmt=auto&app=120&f=JPEG?w=654&h=368'); /* 背景图片路径，注意相对路径的写法 */
+}
+.the_one_box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 300px;
+  height: 130px;
+  background-color: rgb(89, 158, 221);
+  border-radius: 14px;
+}
+
+.the_two_box{
+  display: flex;
+  flex-direction: column; /* 垂直布局 */
+  align-items: center; /* 水平居中 */
+}
+.the_two_box image{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.the_two_box text{
+  color: rgb(240, 219, 219);
+  display: inline-block;
+  top: 30%;
+  font-weight:bolder;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* 或者 row，取决于你想要的布局 */
+  align-items: flex-start; /* 文本从左开始对齐 */
+  margin-left: some-value; /* 根据需要调整文本之间的间距 */
+}
+.logout-text1 {
+  white-space: nowrap; /* 禁止文本换行 */
+  overflow: hidden; /* 隐藏超出容器的部分 */
+  text-overflow: ellipsis; /* 显示省略号 */
+  width: 2500px;
+  height: 20px;
+  padding-left: 90px;
+  left: 15%;
+}
+.logout-text {
+  font-size: smaller;
+  width: 2000px;
+  height: 25px;
+  padding-top: 1%;
+
+}
+.confirm_button {
+  display: flex;
+  justify-content:center;
+  margin: 10rpx 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.name_box{
+  padding: 20px;
+  display: flex;
+}
+.apply_text{
+  margin-top: 4%;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.touxiang_box{
+  padding: 20px;
+  display: flex;
+}
+.touxiang_text{
+  margin-top: 7%;
+  opacity: 0.5; /* 50% 的透明度 */
+  font-weight: lighter;
+  font-size: large;
+  align-items: center; /* 垂直方向对齐 */
+}
+.touxiang_button{
+margin-top: 5%;
+  height: 50px;
+  width: 80%;
+  font-size: 16px;/*调整文字大小 */
+  opacity: 0.5;
+}
+.nickname_text{
+  font-size: large;
+  opacity: 0.5; /* 50% 的透明度 */
+  font-weight: lighter;
+  margin-right: 20px; /* 设置文本和输入框之间的间距 */
+}
+.nickname_input{
+  width: 80%;
+  border: 1px solid #ccc; /* 添加边框以更好地显示输入框 */
+}
+.item{
+  width: 100%;
+  position: fixed;
+  left:0%;
+  top:30%;
+}
+.order{
+  height: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  border-bottom: 1px solid #cccccc;
+  color: #c6c0c3;
+}
+.jiantou{
+  float: right;
+  display: inline-block;
+  padding-right: 10px;
+}

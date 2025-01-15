@@ -1,0 +1,61 @@
+/* 全局样式或页面样式 */
+.background {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+ 
+.ima {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+ 
+.tit {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333333;
+}
+ 
+/* 价格文本样式 */
+.tit:nth-child(3) {
+  font-size: 16px;
+  font-weight: normal;
+  color: #411616;
+}
+ .suan{
+   margin-top: 10%;
+   display: column;
+ }
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #ff3333;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.btn2 {
+  background-color:orange;
+  padding: 3px 10px;
+  color: #33aa1bf8;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 20px;
+  width: 50px;
+  height: 10px;
+}
+ 
+/* 添加按钮的悬停效果（虽然小程序中没有真正的悬停效果，但可以模拟点击效果） */
+.btn:active {
+  background-color: #e02b2b;
+}

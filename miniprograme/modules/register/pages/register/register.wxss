@@ -1,0 +1,7 @@
+/* modules/register/pages/register/register.wxss */
+.login_button{
+  color: black;
+  margin-top: 3%;
+  height: 50px;
+  width: 200px;
+}

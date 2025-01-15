@@ -1,0 +1,93 @@
+<!--pages/personal/personal.wxml-->
+<view class="content">
+  <view class="_background">
+    <view class="the_one_box">
+      <view wx:if="{{!isshow_user_info}}" class="the_two_box">
+        <image round src="{{ userinfo_profile_picture}}" />
+        <text bindtap="login"> 点击登录 </text>
+      </view>
+      <view wx:if="{{isshow_user_info}}" class="the_two_box">
+        <image round src="{{ userinfo_profile_picture}}" bindtap="login_image" />
+
+        <view class="text-container">
+          <text bindtap="login_text" class="logout-text1">{{userInfo_name}}</text>
+          <text bindtap="logout" class="logout-text">[注销]</text>
+        </view>
+      </view>
+    </view>
+    <!-- 昵称为空的提示 -->
+    <van-dialog id="van-dialog" />
+
+  </view>
+
+  <view wx:if="{{show_image}}">
+    <!-- 弹出层 -->
+    <van-popup show="{{ show_image }}" position="bottom" custom-style="height: 30%;" bind:close="onClose">
+      <view class="apply_text">
+        申请获取您的头像
+      </view>
+
+      <!-- 需要使用form组件包裹住button组件 -->
+      <form bindsubmit="submit_touxiang">
+        <view class="touxiang_box">
+          <text class="touxiang_text"> 头像： </text>
+          <button class="touxiang_button" open-type="chooseAvatar" bindchooseavatar="submit_touxiang">点击获取您的头像</button>
+        </view>
+
+
+        <view class="confirm_button">
+          <view>
+            <button bindtap="close_register_image">返回</button>
+          </view>
+          <!-- 用来模拟空格 -->
+          <view style="height: 20rpx; width: 50px;"></view>
+          <view>
+            <!-- 如果将form-type = "submit",就会将按钮变为提交按钮 -->
+            <!-- 在点击提交按钮时候，会触发表单的bindsubmit提交事件 -->
+            <button bindtap="close_register_image">确定</button>
+          </view>
+        </view>
+      </form>
+
+    </van-popup>
+  </view>
+
+  <view wx:if="{{show_text}}">
+    <!-- 弹出层 -->
+    <van-popup show="{{ show_text }}" position="bottom" custom-style="height: 30%;" bind:close="onClose">
+      <view class="apply_text">
+        申请获取您的昵称
+      </view>
+
+      <!-- 需要使用form组件包裹住input以及button组件 -->
+      <form bindsubmit="onSubmit">
+        <!-- input输入框组件的type属性设置为nickname,用户点击输入框，键盘上方才会显示微信昵称 -->
+        <!-- 如果添加了name属性，form组件就会自动收集带有name属性的表单元素的值 -->
+        <view class="name_box">
+          <text class="nickname_text"> 昵称: </text>
+          <input class="nickname_input" type="nickname" name="nickname"> </input>
+        </view>
+
+        <view class="confirm_button">
+          <view>
+            <button bindtap="close_register_text">返回</button>
+          </view>
+          <!-- 用来模拟空格 -->
+          <view style="height: 20rpx; width: 50px;"></view>
+          <view>
+            <!-- 如果将form-type = "submit",就会将按钮变为提交按钮 -->
+            <!-- 在点击提交按钮时候，会触发表单的bindsubmit提交事件 -->
+            <button form-type="submit" bindtap="close_register_text">确定</button>
+          </view>
+        </view>
+      </form>
+    </van-popup>
+  </view>
+ 
+  <view class="item" wx:if="{{isshow_user_info}}">
+  <view class="order">
+    <text>我的收藏</text>
+    <text class="jiantou">></text>
+  </view>
+  </view>
+</view>

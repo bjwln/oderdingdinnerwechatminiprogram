@@ -1,0 +1,16 @@
+<!--modules/godds_more/pages/godds_more/goods_more.wxml-->
+<view  class="background">
+
+  <image class="ima" src="{{items.image}}"></image>
+    <text class="tit">{{items.title}}</text>
+    <text  class="tit">￥ {{items.price}} 元</text>
+    <text class="btn2" data-id="{{items.id}}" >添加收藏 </text>
+   <view class="suan">
+   <text class="comment">{{items.comment}}</text>
+   <text class="btn" bindtap='addOrder' data-id="{{items.id}}" >添加 </text>
+   </view>
+    
+    <van-toast id="van-toast" />
+
+</view>
+    

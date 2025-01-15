@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+  以下是配置导航栏的
+  "navigationBarBackgroundColor": "#a9a9a9",      
+   "navigationBarTextStyle": "black",              
+  "navigationBarTitleText": "首页",
+  以下是配置主体背景颜色的
+  "backgroundColor": "#ebf2f7",
+  "backgroundTextStyle": "light"
+}

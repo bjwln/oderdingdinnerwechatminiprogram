@@ -1,0 +1,81 @@
+/* modules/login/pages/login/login.wxss */
+.box{
+  height: 70px;
+  width: 500px;
+  display:flex;
+}
+/* Vant-weapp自定义主题样式 */
+.my-button{
+  background-color: rgb(180, 168, 168) !important;
+  left: 100%;
+}
+.van_field_class{
+  margin-left: 15%;
+}
+.show_input{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 70px;
+  margin-left: 70px;
+
+}
+/* 设置input的样式 */
+.input-with-margin {
+  display: block; /* 将input设置为块级元素，这样margin才会生效 */
+  margin-bottom: 35px; /* 设置input下方的外边距为15px */
+  width: 100%; /* 假设您希望input占据父容器的全部宽度 */
+}
+.login_button{
+  margin-left: 25%;
+  margin-top: 3%;
+  height: 500px;
+  width: 200px;
+}
+.register_text {
+  width: 115%;
+  color: red;
+  text-align: center; /* 如果想要文本居中显示 */
+}
+.apply_text{
+  font-size: 15px;
+  font-weight: bolder;
+}
+.touxiang_box{
+  padding: 20px;
+  display: flex;
+}
+.touxiang_text{
+  margin-top: 2%;
+  opacity: 0.5; /* 50% 的透明度 */
+  font-weight: lighter;
+  font-size: large;
+  align-items: center; /* 垂直方向对齐 */
+}
+.touxiang_button{
+  height: 40px;
+  width: 80%;
+  font-size: 16px;/*调整文字大小 */
+  opacity: 0.5;
+}
+.name_box{
+  padding: 20px;
+  display: flex;
+}
+.nickname_text{
+  font-size: large;
+  opacity: 0.5; /* 50% 的透明度 */
+  font-weight: lighter;
+  margin-right: 20px; /* 设置文本和输入框之间的间距 */
+}
+.nickname_input{
+  width: 80%;
+  border: 1px solid #ccc; /* 添加边框以更好地显示输入框 */
+}
+.confirm_button {
+  display: flex;
+  margin: 50rpx 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}

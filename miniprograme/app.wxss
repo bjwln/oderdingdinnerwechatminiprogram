@@ -1,0 +1,9 @@
+/**app.wxss**/
+ /* 允许全局样式影响组件 */
+@import "miniprogram_npm/@vant/weapp/common/index.wxss"; 
+.container {
+  margin:0;
+  padding:0;
+  height: 100%;
+  box-sizing: border-box;
+} 

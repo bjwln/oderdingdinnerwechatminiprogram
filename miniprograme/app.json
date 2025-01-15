@@ -1,0 +1,81 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/pay/pay",
+    "pages/my/my"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabbar icon/none swaitch .png",
+        "selectedIconPath": "static/tabbar icon/swaitch.png"
+       
+    },        
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "static/tabbar icon/nonemy.png",
+      "selectedIconPath": "static/tabbar icon/my.png"
+    }
+  ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "subPackages": [{
+    "root":"modules/order",
+    "name":"ordermodules",
+    "pages": [
+      "pages/orders/orders"
+    ]
+  },{
+    "root":"modules/goods",
+    "name":"goodsitems",
+    "pages": [
+      "pages/goods/goods"
+    ]
+  },
+    {
+    "root":"modules/login",
+    "name":"loginpage",
+    "pages": [
+      "pages/login/login"
+    ]
+    },
+    {
+      "root":"modules/register",
+      "name":"registerpage",
+      "pages": [
+        "pages/register/register"
+      ]
+      },{
+      "root":"modules/godds_more",
+      "name":"goods_more",
+      "pages": [
+        "pages/godds_more/goods_more"
+      ]
+      },{
+        "root":"modules/my_love",
+        "name":"my_love",
+        "pages": [
+          "pages/my_love/my_love"
+        ]
+        }
+],
+"preloadRule": {
+  "pages/index/index":{
+    "network": "all",
+    "packages": ["goodsitems"]
+  },
+  "modules/login/pages/login/login":{
+    "network": "all",
+    "packages": ["registerpage"]
+  }
+}
+}
