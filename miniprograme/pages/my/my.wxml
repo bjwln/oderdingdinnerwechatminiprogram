@@ -86,7 +86,7 @@
  
   <view class="item" wx:if="{{isshow_user_info}}">
   <view class="order">
-    <text>我的收藏</text>
+    <text bindtap="goto_mylove">我的收藏</text>
     <text class="jiantou">></text>
   </view>
   </view>
